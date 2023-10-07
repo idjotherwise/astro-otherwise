@@ -2,6 +2,14 @@
 import NavigationLinks from "../components/NavigationLinks.astro";
 import BaseLayout from "../layouts/BaseLayout.astro"; 
 const pageTitle = "About";
+
+const identity = {
+  name: "Otherwise",
+  alias: "Tybed",
+  country: "Wales/Austria",
+  occuation: "Software Dev",
+}
+const skills = ["Rust", "Julia", "Go", "Python", "Typescript"]
 ---
 
 <BaseLayout>
@@ -42,6 +50,12 @@ const pageTitle = "About";
           <dd class="text-2xl font-bold leading-9 tracking-tight text-white">Unlimited</dd>
         </div>
       </dl>
+      <div class="pt-10 grid grid-cols-2 gap-x-16 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+        <ul>
+        {skills.map((s) => <li>{s}<span aria-hidden="true">&rarr;</span></li>)}
+        </ul>
+        <p>I am {identity.name} (or {identity.alias}), I live in {identity.country} and work as a {identity.occuation}</p>
+      </div>
     </div>
   </div>
 </BaseLayout>
