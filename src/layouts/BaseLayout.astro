@@ -18,10 +18,8 @@ const pageTitle = "Home";
       <slot />
     </div>
 		<Footer />
+		<script>
+		import "../scripts/menu.js";
+		</script>
 	</body>
-	<script>
-	document.querySelector('.hamburger').addEventListener('click', () => {
-		document.querySelector('.nav-links').classList.toggle('hidden')
-	});
-	</script>
 </html>
