@@ -1,0 +1,20 @@
+---
+import NavigationLinks from "../components/NavigationLinks.astro";
+const pageTitle = "Home";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+	</head>
+	<body class="flex flex-col h-screen">
+  	<NavigationLinks />
+  	<div class="relative isolate overflow-hidden h-screen bg-gray-900 b-24 sm:pb-32">
+      <slot />
+    </div>
+	</body>
+</html>
