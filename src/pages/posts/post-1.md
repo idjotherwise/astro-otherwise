@@ -2,10 +2,10 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'A post about something'
 pubDate: 2023-10-01
-description: 'This is the first post.'
+description: 'This is the description of the first post.'
 author: 'idjotherwise'
 image:
-	url: '/masthead-light.jpg'
+	path: '../masthead-light.jpg'
 	alt: 'Light mountains'
 tags: ["astro", "mountains", "nontech"]
 ---

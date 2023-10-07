@@ -5,9 +5,9 @@ pubDate: 2023-10-01
 description: 'This is the third post.'
 author: 'idjotherwise'
 image:
-	url: '/masthead-light.jpg'
+	path: '../masthead-light.jpg'
 	alt: 'Light mountains'
-tags: ["astro", "mountains", "nontech"]
+tags: ["astro", "tech", "rust", "typescript"]
 ---
 
 # First posts
