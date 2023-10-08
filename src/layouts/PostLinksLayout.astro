@@ -1,0 +1,14 @@
+---
+const {posts} = Astro.props;
+import LinkListItem from "../components/LinkListItem.astro";
+---
+<div class="lg:px-12 px-4 text-white">
+<h1 class="text-3xl lg:text-6xl pb-8 pt-4 
+            text-slate-400 underline decoration-teal-500"
+            >
+            <slot />
+            </h1>
+<ul>
+{posts.map((p) => <LinkListItem post={p} />)}
+</ul>
+</div>

@@ -1,5 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Tag from "../../components/Tag.astro";
+import Rarrow from "../../components/Rarrow.astro";
+import LinkListItem from "../../components/LinkListItem.astro";
 
 export async function getStaticPaths() {
   const allPosts = await Astro.glob('../posts/*.md');
@@ -12,15 +15,17 @@ export async function getStaticPaths() {
     };
   });
 }
-
 const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<BaseLayout><div class="text-white">
-<p>Posts tagged with {tag}</p>
+<BaseLayout>
+<div class="lg:px-12 px-4 text-white">
+<h1 class="text-3xl lg:text-6xl pb-8 pt-4 
+            text-slate-400 underline decoration-teal-500"
+            >Posts tagged with <span class="text-orange-300">#{tag}</span></h1>
 <ul>
-{posts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+{posts.map((p) => <LinkListItem post={p} />)}
 </ul>
 </div>
 </BaseLayout>

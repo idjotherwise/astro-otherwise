@@ -1,0 +1,13 @@
+---
+const {post} = Astro.props;
+import Rarrow from "../components/Rarrow.astro";
+console.log(post)
+---
+
+<li>
+  <Rarrow />
+  <a class="underline decoration-teal-400 
+            pl-4" href=`${post.url}`>
+        {post.frontmatter.title}
+  </a>
+</li>
